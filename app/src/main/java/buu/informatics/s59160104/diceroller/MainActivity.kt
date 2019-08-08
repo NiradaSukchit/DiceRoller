@@ -10,6 +10,9 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+//    var diceImage : ImageView? = null
+    lateinit var diceImage : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 //        val resultText: TextView = findViewById(R.id.result_text)
 //        resultText.text = "Dice Rolled!"
 
+        diceImage = findViewById(R.id.dice_image)
 
     }
 
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 //        val resultText: TextView = findViewById(R.id.result_text)
 //        resultText.text = randomInt.toString()
 
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+//        val diceImage: ImageView = findViewById(R.id.dice_image)
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -40,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        diceImage.setImageResource(drawableResource)
+        diceImage?.setImageResource(drawableResource)
 
 //        Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
     }
