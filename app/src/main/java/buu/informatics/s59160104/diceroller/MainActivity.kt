@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        diceImage?.setImageResource(drawableResource)
+        diceImage.setImageResource(drawableResource)
 
 //        Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
     }
@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
     private fun resetDice() {
 //        val resultText: TextView = findViewById(R.id.result_text)
 //        resultText.text = "0".toString()
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val drawableResource = R.drawable.empty_dice
+        diceImage.setImageResource(drawableResource)
 
     }
 }
